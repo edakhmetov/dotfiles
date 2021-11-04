@@ -12,9 +12,9 @@
 
 
 
-![Display](./pictures/display.png)
-![Display](./pictures/nvim.png)
-![Display](./pictures/rofi-menu.png)
-![Display](./pictures/rofi-blue.png)
-![Display](./pictures/rofi-power.png)
-![Display](./pictures/lock.png)
+![Display](/pictures/display.png)
+![Display](/pictures/nvim.png)
+![Display](/pictures/rofi-menu.png)
+![Display](/pictures/rofi-blue.png)
+![Display](/pictures/rofi-power.png)
+![Display](/pictures/lock.png)
