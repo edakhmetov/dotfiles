@@ -1,0 +1,81 @@
+configuration {
+    display-drun:                   "Apps";
+    display-window:                 "Window";
+    modi:                           "window,drun,ssh,combi,run";
+    show-icons:false;
+}
+
+element-icon {
+  margin: 3px 15px 0 0;
+  size: 20;
+}
+
+* {
+    lines: 15;
+    columns: 1;
+    border-color: #00000000;
+    font: "Iosevka Term 16";
+    background:                  #000000B3;
+    foreground:                  #abbedd;
+    alternate-normal-background: #000000B3;
+    alternate-normal-foreground: #abbedd;
+    selected-normal-background:  #abbedd;
+}
+
+window {
+    border: 0;
+    border-radius: 4px;
+    padding: 20;
+    width: 28%;
+    height: 40%;
+    opacity: "90";
+}
+
+mainbox {
+    background-color: #00000000;
+    children: [inputbar, listview];
+    spacing: 10px;
+    padding: 20px 0;
+    border: 1px;
+    border-color: @base0D;
+}
+
+
+listview {
+    background-color: #00000000;
+    fixed-height: 0;
+    border: 0px;
+    spacing: 5px;
+    scrollbar: false;
+    padding: 10px 10px 0px;
+}
+
+element {
+    background-color: #00000000;
+    border: 0;
+    border-radius: 15px;
+    padding: 5 0  5 10 ;
+}
+
+element selected {
+    background: #98971aff;
+    text-color: #fbf1c7;
+}
+
+inputbar {
+    children:   [entry,case-indicator];
+    background-color: #00000000;
+    padding: 0 0 0 14;
+}
+
+case-indicator {
+    background-color: #00000000;
+	text-color: #ebdbb2;
+    spacing:    0;
+}
+
+entry {
+    background-color: #00000000;
+    spacing:    0;
+	placeholder: "";
+}
