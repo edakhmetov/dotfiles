@@ -31,6 +31,7 @@
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
     # os_icon               # os identifier
+    context
     dir                     # current directory
     vcs                     # git status
     prompt_char             # prompt symbol
@@ -79,7 +80,7 @@
     gcloud                  # google cloud cli account and project (https://cloud.google.com/)
     google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
     toolbox                 # toolbox name (https://github.com/containers/toolbox)
-    context                 # user@hostname
+    # context                 # user@hostname
     nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     nnn                     # nnn shell (https://github.com/jarun/nnn)
@@ -181,10 +182,10 @@
   # typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION='⭐'
 
   ################################[ prompt_char: prompt symbol ]################################
-  # Green prompt symbol if the last command succeeded.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=102
+  # Blue prompt symbol if the last command succeeded.
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=012
   # Red prompt symbol if the last command failed.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=196
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=009
   # Default prompt symbol.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_{OK,ERROR}_VIINS_CONTENT_EXPANSION='>'
   # Prompt symbol in command vi mode.
@@ -201,17 +202,17 @@
 
   ##################################[ dir: current directory ]##################################
   # Default current directory color.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=102
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=012
   # If directory is too long, shorten some of its segments to the shortest possible unique
   # prefix. The shortened directory can be tab-completed to the original.
   typeset -g POWERLEVEL9K_SHORTEN_STRATEGY=truncate_to_unique
   # Replace removed segment suffixes with this symbol.
   typeset -g POWERLEVEL9K_SHORTEN_DELIMITER=
   # Color of the shortened directory segments.
-  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=102
+  typeset -g POWERLEVEL9K_DIR_SHORTENED_FOREGROUND=012
   # Color of the anchor directory segments. Anchor segments are never shortened. The first
   # segment is always an anchor.
-  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=102
+  typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=012
   # Display anchor directory segments in bold.
   typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=true
   # Don't shorten directories that contain any of these files. They are anchors.
@@ -258,7 +259,7 @@
   # directory will be shortened only when prompt doesn't fit or when other parameters demand it
   # (see POWERLEVEL9K_DIR_MIN_COMMAND_COLUMNS and POWERLEVEL9K_DIR_MIN_COMMAND_COLUMNS_PCT below).
   # If set to `0`, directory will always be shortened to its minimum length.
-  typeset -g POWERLEVEL9K_DIR_MAX_LENGTH=50
+  typeset -g POWERLEVEL9K_DIR_MAX_LENGTH=40
   # When `dir` segment is on the last prompt line, try to shorten it enough to leave at least this
   # many columns for typing commands.
   typeset -g POWERLEVEL9K_DIR_MIN_COMMAND_COLUMNS=40
@@ -362,10 +363,10 @@
     if (( $1 )); then
       # Styling for up-to-date Git status.
       local       meta='%f'     # default foreground
-      local      clean='%76F'   # green foreground
-      local   modified='%178F'  # yellow foreground
-      local  untracked='%39F'   # blue foreground
-      local conflicted='%196F'  # red foreground
+      local      clean='%002F'   # green foreground
+      local   modified='%003F'  # yellow foreground
+      local  untracked='%004F'   # blue foreground
+      local conflicted='%001F'  # red foreground
     else
       # Styling for incomplete and stale Git status.
       local       meta='%244F'  # grey foreground
@@ -853,7 +854,7 @@
 
   # Don't show context unless running with privileges or in SSH.
   # Tip: Remove the next line to always show context.
-  typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
+  # typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
 
   # Custom icon.
   # typeset -g POWERLEVEL9K_CONTEXT_VISUAL_IDENTIFIER_EXPANSION='⭐'
