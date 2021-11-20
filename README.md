@@ -10,6 +10,11 @@
 * lockscreen: i3-lock
 * font: Iosevka Nerd; Iosevka Term
 
+Credits to:
+* https://github.com/Manas140/dotfiles
+* https://github.com/NoahRR/archcraft-i3-config
+* https://github.com/Shubhaankar-Sharma/dotfiles
+* https://github.com/kamek-pf/polybar-forecast
 
 
 ![Display](/pictures/display.png)
