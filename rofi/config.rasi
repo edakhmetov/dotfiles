@@ -1,59 +1,84 @@
 configuration {
-  modi: "drun";
-  font: "Iosevka Font Medium 14";
-  disable-history: false;
-  display-drun: "Search";
-  drun-display-format: "{name}";
-}
-
-@theme "/dev/null"
-
-element-text, element-icon {
-  background-color: inherit;
-  text-color:       inherit;
+    display-drun:                   "Apps";
+    display-window:                 "Window";
+    modi:                           "drun";
+    show-icons:true;
+    font: "Iosevka Font Medium 14";
 }
 
 @import "colors.rasi"
 
+element-icon {
+  margin: 3px 15px 0 0;
+  size: 20;
+}
+
 * {
-  background-color: @bg;
-  text-color: @fg;
+    lines: 15;
+    columns: 1;
+    border-color: #00000000;
+    font: "Iosevka Font Medium 16";
+    background:                  @bg;
+    foreground:                  @fg;
+    alternate-normal-background: @bg;
+    alternate-normal-foreground: @fg;
+    selected-normal-background:  @al;
 }
 
 window {
-  padding: 20px;
-  height: 40%;
-  width: 40%;
+    border: 0;
+    border-radius: 4px;
+    padding: 50;
+    width: 28%;
+    height: 50%;
+    opacity: "90";
 }
 
-prompt, entry {
-  text-color: @fg;
-  background-color: @al;
-  padding: 10px;
-  border-radius: 10px;
+mainbox {
+    background-color: #00000000;
+    children: [inputbar, listview];
+    spacing: 10px;
+    padding: 30px 0;
+    border: 1px;
+    border-color: @base0D;
 }
+
 
 listview {
-  columns: 2;
-  lines: 10;
-}
-
-entry {
-  margin: 0 0 10px 10px;
-}
-
-prompt {
-  margin: 0 0 10px 0;
-  padding: 10px 20px;
+    background-color: #00000000;
+    fixed-height: 0;
+    border: 0px;
+    spacing: 5px;
+    scrollbar: false;
+    padding: 10px 10px 0px;
 }
 
 element {
-  background-color: @bg;
-  padding: 10px 20px;
-  border-radius: 10px;
+    background-color: #00000000;
+    border: 0;
+    border-radius: 15px;
+    padding: 5 0  5 10 ;
 }
 
-element.selected {
-  background-color: @fg;
-  text-color: @al;
+element selected {
+    background: @fg;
+    text-color: #ff79c6;
+}
+
+inputbar {
+    children:   [entry,case-indicator];
+    background-color: #00000000;
+    padding: 0 0 0 14;
+}
+
+case-indicator {
+    background-color: #00000000;
+    text-color: #ffffff;
+    spacing:    0;
+}
+
+entry {
+    background-color: #00000000;
+    spacing:    0;
+	placeholder: "";
 }

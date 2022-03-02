@@ -1,0 +1,94 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Dracula";
+    font: "Iosevka Font Medium 12";
+    display-drun: "";
+    drun-display-format: "{name}"; 
+}
+
+@import "./colorscheme.rasi"
+
+* {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+window {
+    height: 65%;
+    width: 40%;
+    transparency: "real";
+    background-color: @background;
+    border: 2px;
+    border-color: @background;
+}
+
+inputbar {
+    background-color: @background;
+    text-color: @foreground;
+    border-radius: 2%;
+    padding: 1%;
+}
+
+prompt {
+    enabled: true;
+    margin: 0 1% 0 0;
+}
+
+entry {
+    font: "Iosevka Font Medium 12";
+    placeholder-color: @foreground;
+    placeholder: "Search";
+    blink: true; 
+}
+
+
+mainbox {
+    children: [ inputbar, listview ];
+    margin: 3% 2% 1% 2%;
+}
+
+listview {
+    columns: 4;
+    layout: vertical;
+    spacing: 0;
+    margin: 1% 0;
+}
+
+element {
+    orientation: vertical;
+    padding: 1.5% 1.5%;
+    border-radius: 10;
+    background-color: @background;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color: @red;
+}
+
+element normal.active, element normal.active {
+    background-color: @selection;
+    color: @background;
+}
+
+element selected {
+    background-color: @selection;
+}
+
+element selected.urgent {
+    background-color: @red;
+}
+
+element selected.active {
+    background-color: @selection;
+}
+
+element-icon {
+    size: 5%;
+}
+
+element-text {
+    font: "Iosevka Font Medium 10";
+    color: inherit;
+    horizontal-align: 0.5;
+}
