@@ -20,6 +20,7 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index # directory stack
 # | nvim |
 # +------+
 alias v='nvim'
+alias sv='sudo nvim'
 
 # +--------+
 # | python |

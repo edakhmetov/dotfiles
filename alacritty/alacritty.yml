@@ -58,7 +58,9 @@ colors:
     white:   '0xffffff'
 
 #Background opacity
-background_opacity: 0.9
+#background_opacity: 0.9
+window:
+  opacity: 0.97
 
 # Live config reload (changes require restart)
 #live_config_reload: true

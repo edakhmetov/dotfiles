@@ -4,7 +4,7 @@ greet="Welcome, Back"
 color="ffffff"
 wrong_pass="Incorrect, Try Again"
 font="Iosevka Font"
-background=/usr/share/backgrounds/4.jpg
+background=/usr/share/backgrounds/554.jpg
 
 i3lock \
 --nofork \
@@ -23,7 +23,7 @@ i3lock \
 --time-color=$color \
 --time-str="%H:%M:%S" \
 --time-font=$font \
---time-size=72 \
+--time-size=86 \
 --time-color=$color \
 --date-color=$color \
 --date-str="%A, %d %B" \

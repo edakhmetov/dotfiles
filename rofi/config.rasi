@@ -1,28 +1,29 @@
 configuration {
-    display-drun:                   "Apps";
-    display-window:                 "Window";
-    modi:                           "drun";
-    show-icons:true;
-    font: "Iosevka Font Medium 14";
+    display-drun:         "Apps";
+    display-window:       "Window";
+    modi:                 "drun";
+    show-icons:		  true;
+    font:		  "FiraCode Nerd Font 12";
 }
 
 @import "colors.rasi"
 
 element-icon {
   margin: 3px 15px 0 0;
-  size: 20;
+  size: 30;
 }
 
 * {
     lines: 15;
     columns: 1;
     border-color: #00000000;
-    font: "Iosevka Font Medium 16";
+    font: "FiraCode Nerd Font 14";
     background:                  @bg;
     foreground:                  @fg;
     alternate-normal-background: @bg;
     alternate-normal-foreground: @fg;
-    selected-normal-background:  @al;
+    selected-normal-background:  @green;
+    selected-normal-foreground:  @bg;
 }
 
 window {
@@ -57,12 +58,13 @@ element {
     background-color: #00000000;
     border: 0;
     border-radius: 15px;
-    padding: 5 0  5 10 ;
+    padding: 5 0 5 10;
+    vertical-align: 0.5;
 }
 
 element selected {
-    background: @fg;
-    text-color: #ff79c6;
+    background: #ffffff;
+    text-color: @dark;
 }
 
 inputbar {

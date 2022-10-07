@@ -1,7 +1,8 @@
 #!/bin/sh
 
-KEY=""
+KEY="a5af4d4d17cee11fdc35f5f9ab98d34e"
 CITY="5950267"
+# CITY="1526384"
 UNITS="metric"
 SYMBOL="°"
 

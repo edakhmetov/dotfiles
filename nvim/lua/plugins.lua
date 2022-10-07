@@ -22,8 +22,13 @@ require('lualine').setup{
   options = {theme = 'onedark'}
 }
 
-vim.g.onedark_transparent_background = true
-require('onedark').setup()
+--vim.opt.termguicolors = true
+--vim.g.onedark_transparent_background = true
+require('onedark').setup {
+  transparent = true,
+  term_colors = true,
+}
+require('onedark').load()
 
 require('colorizer').setup()
 
@@ -112,7 +117,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable the following language servers
-local servers = { 'pyright', 'tsserver', 'cssls', 'html' }
+local servers = { 'tsserver', 'cssls', 'html', 'pylsp' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,

@@ -14,6 +14,10 @@ setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 
+# add path to the PATH variable
+export PATH="$HOME/.local/bin:$PATH"
+export PATH=$PATH:/opt/RunJS
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/edd/.config/zsh/.zshrc'
 

@@ -1,5 +1,5 @@
 configuration {
-    font:                           "Iosevka Term 10";
+    font:                           "FiraCode Nerd Font 10";
     show-icons:                     false;
     icon-theme: 		    "Arc-X-D";
     scroll-method:                  0;
@@ -46,8 +46,8 @@ element.normal.active {
     text-color:       @active-foreground;
 }
 element.selected.normal {
-    background-color: @background;
-    text-color:       @foreground;
+    background-color: @green;
+    text-color:       @background;
 }
 element.selected.urgent {
     background-color: @selected-urgent-background;
